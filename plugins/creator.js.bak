@@ -1,0 +1,24 @@
+let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
+  let type = (args[0] || '').toLowerCase()
+  let _type = (args[1] || '').toLowerCase()
+
+
+//------- NOMOR
+  let nowner = `${nomorown.split`@`[0]}@s.whatsapp.net`
+  let teksnomor = `${htki} *OWNER* ${htka}
+✦ @${nomorown.split`@`[0]} ✦
+------- ${nameown} -------
+
+📮 *Note:*
+• Owner tidak menerima save contact
+• Owner berhak blockir tanpa alasan
+• Berbicaralah yang sopan & tidak spam
+• Owner Hanya merespon yang berkaitan dengan BOT
+• No Telp`
+
+handler.help = ['creator, owner']
+handler.tags = ['main']
+handler.command = /^creator(owner)$/i
+
+module.exports = handler
+

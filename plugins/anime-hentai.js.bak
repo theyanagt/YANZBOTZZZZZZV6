@@ -1,0 +1,16 @@
+let fetch = require('node-fetch')
+let handler = async (m, { conn, usedPrefix, command }) => {
+  try {
+  let res = await fetch(`https://api.waifu.pics/nsfw/${command}`)
+  let json = await res.json()
+  conn.sendButtonImg(m.chat, json.url, 'Nihh Jangan Colii', wm, `Next`, `${usedPrefix}${command}` , m)
+  } catch {
+    throw eror 
+  }
+}
+handler.help = ['blowjob', 'trap', 'ahegao']
+handler.tags = ['premium']
+handler.command = /^(blowjob|trap|ahegao)$/i
+handler.premium = true
+
+module.exports = handler
